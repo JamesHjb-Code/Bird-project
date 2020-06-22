@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>添加鸟类</title>
+  <link rel="stylesheet" href="../../css/user/user-addbird.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../../css/tooltip.min.css">
+  <link rel="stylesheet" type="text/css" href="../../css/popup.css">
+</head>
+<body>
+<!--名字标题-->
+<div class="right-contion">
+  <div class="right-h1">
+    <div class="box-h1">
+      <div class="head-h1">
+        <span>添加鸟类</span>
+      </div>
+      <div class="head-xt">
+      </div>
+      <div class="head-nav">
+        <div class="head-icon">
+          <i class="fa fa-home"></i>
+          <i class="fa fa-angle-right"></i>
+          <i class="fa fa-twitter"></i>
+        </div>
+        <div class="head-font">
+          <span>鸟类信息</span>
+          <i class="fa fa-angle-right"></i>
+          <span>添加鸟类</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--主页信息-->
+  <div class="Cen-info">
+    <div class="Cen-small">
+      <form id="form1" enctype="multipart/form-data">
+        <div class="add-box">
+          <div class="add-bird">
+            <div class="add-font">鸟类信息</div>
+            <div class="form-small">
+              <div class="forget-input">
+                <div class= "forget-group">
+                  <input class="forget-cont" type="user" id="name" placeholder="鸟名">
+                  <i class="fa fa-twitter"></i>
+                </div>
+                <div class= "forget-group">
+                  <input class="forget-cont" type="user" id="mu" placeholder="鸟目">
+                  <i class="fa fa-twitter"></i>
+                </div>
+                <div class= "forget-group">
+                  <input class="forget-cont" type="user" id="ke" placeholder="鸟科">
+                  <i class="fa fa-twitter"></i>
+                </div>
+                <div class= "forget-group">
+                  <input class="forget-cont" type="user" id="text" placeholder="外貌特征">
+                  <i class="fa fa-twitter"></i>
+                </div>
+                <!--点击上传图片-->
+                <div id="imgPreview">
+                  <div id="prompt3">
+                      <span id="imgSpan">
+                        <i class="fa fa-plus-circle"></i>
+                        <div class="img-font">点击上传图片</div>
+                          <br />
+                      </span>
+                    <input type="file" id="imgage1" name="imgage1" class="filepath" onchange="changepic(this)" accept="image/jpg,image/jpeg,image/png,image/PNG">
+                    <!--当vaule值改变时执行changepic函数，规定上传的文件只能是图片-->
+                  </div>
+                  <img src="#" id="img3" />
+                </div>
+                <!--按钮-->
+                <div class="forget-btn">
+                  <input type="hidden" value="" id="imgUrl"/><!--上传图片-->
+                  <input type="button" id="tijiao" class="logbtn" value="提交">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+</body>
+<script src="../../js/jquery-1.11.0.min.js"></script>
+<script src="../../js/user/user-addbird.js" type="text/javascript"></script>
+<script type="text/javascript" src="../../js/popup.js"></script>
+</html>

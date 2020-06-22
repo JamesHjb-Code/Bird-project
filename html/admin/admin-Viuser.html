@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>查看用户</title>
+  <link href="../../css/bootstrap.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/admin/admin-Viuser.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"><!--icon-->
+  <link rel="stylesheet" type="text/css" href="../../css/tooltip.min.css">
+</head>
+<body>
+    <!--右侧信息-->
+    <div class="right-contion">
+      <!--名字标题-->
+      <div class="right-h1">
+        <div class="box-h1">
+          <div class="head-h1">
+            <span>查看用户</span>
+          </div>
+          <div class="head-xt">
+          </div>
+          <div class="head-nav">
+            <div class="head-icon">
+              <i class="fa fa-home"></i>
+              <i class="fa fa-angle-right"></i>
+              <span class="head-nav1">
+              <i class="fa fa-users"></i>
+              </span>
+            </div>
+            <div class="head-font">
+              <span>用户管理</span>
+              <i class="fa fa-angle-right"></i>
+              <span>查看用户</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--查看用户-表格-->
+      <div class="right-table">
+        <div class="right-box">
+          <div class="right-head1">
+            <span>查看用户</span>
+          </div>
+          <div class="right-small">
+            <table class="ta">
+              <tr>
+                <td style="width: 40px;">编号</td>
+                <td style="width: 70px;">用户名</td>
+                <td style="width: 70px;">密码</td>
+                <td style="width: 150px;">邮箱</td>
+                <td style="width: 70px;">操作</td>
+              </tr>
+            </table>
+            <div class="msg">
+              <!--显示数据-->
+              <table></table>
+              <div class="btn-fy">
+                <div class="text">
+                  <table></table>
+                </div>
+                <ul class="page">
+                  <li class="firstPage">首页</li>
+                  <li class="prePage">上一页</li>
+                  <li class="nextPage">下一页</li>
+                  <li class="lastPage">尾页</li>
+                </ul>
+              </div>
+              </msg>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+  </div>
+</div>
+
+<!--模态框-->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+        <span>编号:</span>
+        <h4 class="modal-title ss" id="myModalLabel" style="display: inline-block" data-index="0">Modal title</h4>
+        <span class="updata-head">修改编辑</span>
+      </div>
+      <div class="modal-body">
+        <form class="form-horizontal" id="form">
+          <div class="form-group">
+            <label class="col-sm-2 control-label"></label>
+            <div class="col-sm-10">
+              <span class="font-s">用户：</span><input type="text" class="form-control ss"  name="username" placeholder="用户名" data-index="1">
+            </div>
+          </div>
+          <div class="form-group">
+            <label  class="col-sm-2 control-label"></label>
+            <div class="col-sm-10">
+              <span class="font-s">密码：</span><input type="text" class="form-control ss"  name="password" placeholder="密码" data-index="2">
+            </div>
+          </div>
+          <div class="form-group">
+            <label  class="col-sm-2 control-label"></label>
+            <div class="col-sm-10">
+              <span class="font-s">邮箱：</span><input type="text" class="form-control ss"  name="email" placeholder="邮箱" data-index="3">
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" id="sign">保存</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--清除浮动-->
+<!--  <div style ="clear:both"></div>-->
+</body>
+
+<script src="../../js/jquery-1.11.0.min.js" type="text/javascript"></script>
+<script src="../../js/admin/admin-Viuser.js" type="text/javascript"></script>
+<script src="../../js/bootstrap.min.js"></script>
+</html>

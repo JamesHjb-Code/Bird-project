@@ -1,0 +1,104 @@
+@charset "utf-8";
+/* 以下实际使用若已初始化可删除 .nav height父级需逐级设置为100%*/
+li{list-style:none}
+a{text-decoration:none;}
+/* 以上实际使用若已初始化可删除 */
+
+/* nav */
+.nav{
+  width: 13.2%;
+  height:93.5%;
+  background:#ffffff;
+  transition: all .3s;
+  position: absolute;
+}
+.nav a
+{display: block;
+  overflow: hidden;
+  padding-left: 20px;
+  line-height: 46px;
+  max-height: 46px;
+  color: #535455;
+  transition: all .3s;
+  font-weight: bold;
+}
+.nav a span{
+  margin-left: 10px;
+}
+.nav-item{
+  position: relative;
+}
+.nav-item.nav-show{
+  border-bottom: none;
+}
+.nav-item ul{
+  display: none;
+  background: #f4f4f4;
+  border-top: #a4a4a4 1px solid;
+  border-bottom: #a4a4a4 1px solid;
+}
+.smalldao{
+  padding-left:15px;
+}
+.nav-item.nav-show ul{
+  display: block;
+}
+.nav-item>a:before{
+  content: "";
+  position: absolute;
+  left: 0px;
+  width: 2px;
+  height: 46px;
+  background: #34A0CE;
+  opacity:0;
+  transition: all .3s;
+}
+.nav .nav-icon{
+  font-size: 20px;
+  position: absolute;
+  margin-left:-1px;
+}
+
+/* 此处修改导航图标 可自定义iconfont 替换*/
+.icon_1::after{content: "\e964";}
+.icon_2::after{content: "\e964";}
+.icon_3::after{content: "\e964";}
+/*---------------------*/
+.nav-more{
+  float:right;
+  margin-right: 20px;
+  font-size: 12px;
+  transition: transform .3s;
+}
+/* 此处为导航右侧箭头 如果自定义iconfont 也需要替换*/
+.nav-more::after{content: "\e621";}
+/*---------------------*/
+.nav-show .nav-more{transform:rotate(90deg);}
+
+.nav-show,.nav-item>a:hover{color: #FFF;background: linear-gradient(90deg, #6bfffc 10%, #3c96ff 100%);}
+.nav-show>a:before,.nav-item>a:hover:before{opacity:1;}
+.nav-item li:hover a{color: #2196F3;background: #d8dbd6;}
+
+/* nav-mini */
+.nav-mini.nav{width: 60px;}
+.nav-mini.nav .nav-icon{/* margin-left:-2px; */}
+.nav-mini.nav .nav-item>a span{display: none;}
+.nav-mini.nav .nav-more{margin-right: -20px;}
+.nav-mini.nav .nav-item ul{
+  position: absolute;
+  top:0px;
+  left:60px;
+  width: 180px;
+  z-index: 99;
+  background:#34A0CE;
+  overflow: hidden;
+}
+.nav-mini.nav .nav-item:hover{background:#00b4ef;}
+.nav-mini.nav .nav-item:hover .nav-item a{color:#FFF;}
+.nav-mini.nav .nav-item:hover a:before{opacity:1;}
+.nav-mini.nav .nav-item:hover ul{display: block;}
+
+
+
+
+

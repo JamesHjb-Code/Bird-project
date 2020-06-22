@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户登录</title>
+    <link rel="stylesheet" href="../../css/user/user-login.css">
+    <link rel="stylesheet" href="../../css/popup.css">
+    <link href="http://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+
+</head>
+<body>
+  <!--登录框-->
+  <div class="login-ground">
+    <!--左边图片-->
+    <div class="login-left">
+      <img src="../../img/login-img.png"/>
+    </div>
+    <!--右边图片-->
+    <div class="login-right">
+      <!--标题-->
+      <div class="right-bt">
+        <span class="heading">用户登录</span>
+      </div>
+      <!--输入框-->
+      <!--表单登录-->
+      <form id="login">
+        <div class="right-input">
+          <div class="form-group">
+            <input class="form-cont" type="user" id="username" placeholder="用户名">
+            <i class="fa fa-user"></i>
+          </div>
+          <div class="form-group help">
+            <input class="form-cont" type="password" id="password" placeholder="密码">
+            <i class="fa fa-lock"></i>
+          </div>
+        </div>
+        <div class="zt-right">
+          <span class="reg-zt"><a href="UL-forgetpwd.html">忘记密码？</a></span>
+        </div>
+        <!--登录按钮-->
+        <div class="right-btn">
+          <input type="button" class="logbtn" id="btn" value="登录">
+        </div>
+      </form>
+      <!--And线条-->
+      <div class="lines">
+        <div class="lines-left">
+          <hr style="border:1px solid #c8c8c8;margin-top:7px;" width="100%" size=3>
+        </div>
+        <div class="lines-cen">
+          <div class="cen-zt">And</div>
+        </div>
+        <div class="lines-right">
+          <hr style="border:1px solid #c8c8c8;margin-top:7px;" width="100%" size=3>
+        </div>
+      </div>
+      <!--注册按钮-->
+      <div class="right-btn2">
+        <a href="user-register.html">
+          <input type="button" class="logbtn2" value="注册">
+        </a>
+      </div>
+    </div>
+  </div>
+  <div id="div"></div>
+</body>
+<script src="../../js/jquery-3.4.1.min.js" type="text/javascript"></script>
+<script src="../../js/popup.js" type="text/javascript"></script>
+<script src="../../js/user/user-login.js" type="text/javascript"></script>
+</html>

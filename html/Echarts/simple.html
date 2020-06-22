@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+   <head>
+       <meta charset="utf-8">
+   </head>
+   <body style="height: 100%; margin: 0">
+       <div id="container" style="height: 100%"></div>
+       <script type="text/javascript" src="../../js/jquery-3.4.1.min.js"></script>
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-gl/dist/echarts-gl.min.js"></script>
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-stat/dist/ecStat.min.js"></script>
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/extension/dataTool.min.js"></script>
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/map/js/china.js"></script>
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/map/js/world.js"></script>
+       <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=RdQNsKSGanXWhP4KGwUOxocazaVLz0sR"></script>
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/extension/bmap.min.js"></script>
+       <script type="text/javascript">
+         var data=[];
+         $.ajax({
+           type : 'post',
+           async : false, //同步执行
+           url :'../../php/admin/admin-Echarts.php',
+           data : {}, //无参数
+             dataType : 'json', //返回数据形式为json
+               success : function(result) {
+             if (result) {
+               //把result(即Json数据)以参数形式放入Echarts代码中
+              bind(result);
+            }
+           },
+           error : function(errmsg) {
+             alert("加载数据失败");
+           }
+         }); //ajax
+         //把数据放入Echarts代码的数据中
+         function bind(result){
+//             console.log(result);
+           var dom = document.getElementById("container");
+           var myChart = echarts.init(dom);
+           var app = {};
+           var data=[]
+           // 初始化两个数组，盛装从数据库中获取到的数据
+           option = null;
+           option = {
+             title: {/*标题和副标题*/
+               text: '中国鸟类分类数据',/*标题*/
+               subtext: '鸟类鸟目',/*副标题*/
+               left: 'center',
+               /*字体设置定制*/
+               textStyle:{
+                 fontSize:30,/*大小*/
+                 fontWeight:'bold',/*粗体*/
+                 fontStyle:'normal'/*字体样式*/
+               }
+             },
+             tooltip: {
+               trigger: 'item',
+               formatter: '{a} <br/>{b} : {c} ({d}%)'
+             },
+             /*在饼图中显示鸟目名字，位置放在右上边*/
+             legend: {
+               orient: 'vertical',
+               left: 'right',/*位置*/
+               top: '50',/*位置*/
+//             data: ['直接访问', '邮件营销', '联盟广告', '视频广告', '搜索引擎']
+               /*获取数据库的鸟目*/
+               data: (function () {
+                var res = [];
+                 var len = result.length;/*提前获取数据result*/
+                 for (var i = 0;i<len; i++) {
+                  res.push({
+                   name: result[i].mu,/*鸟目*/
+                   });
+                }
+                return res;
+               })()
+             },
+             /*定义饼图系列列表*/
+             series: [
+               {
+                 name: '鸟目',
+                 type: 'pie',
+                 radius: '80%',
+                 bottom: '50',
+                 center: ['50%', '60%'],
+                 data:[{
+                     name:result,
+                     value:result}],
+                 data: (function () {
+                  var res = [];
+                  var len = result.length;/*提前获取数据result*/
+                  for (var i = 0; i < len; i++) {
+                    res.push({
+                       //通过把result进行遍历循环来获取数据并放入Echarts中
+                       name: result[i].mu,/*鸟目*/
+                      value: result[i].num/*鸟目的数量*/
+                    });
+                  }
+                 return res;
+                })(),
+                 emphasis: {
+                   itemStyle: {
+                     shadowBlur: 10,
+                     shadowOffsetX: 0,
+                     shadowColor: 'rgba(0, 0, 0, 0.5)'
+                   }
+                 }
+               }
+             ]
+           };
+           ;
+           /* 使用刚指定的配置项和数据显示图表。*/
+           if (option && typeof option === "object") {
+             myChart.setOption(option, true);
+           }
+         }
+       </script>
+   </body>
+</html>

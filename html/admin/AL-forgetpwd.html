@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>管理员找回密码</title>
+  <link rel="stylesheet" href="../../css/admin/AL-forgetpwd.css">
+  <link rel="stylesheet" href="../../css/popup.css">
+  <link href="http://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+</head>
+<body>
+<!--找回密码框-->
+<div class="login-ground">
+  <!--标题-->
+  <div class="head-bt">
+    <span class="heading">管理员找回密码</span>
+  </div>
+  <!--输入框-->
+  <form action="#">
+    <div class="forget-input">
+      <div class="forget-group">
+        <input class="forget-cont" type="user" id="username" placeholder="用户名">
+        <i class="fa fa-user"></i>
+      </div>
+      <div class="forget-group">
+        <input class="forget-cont" type="password" id="password1" placeholder="更新密码">
+        <i class="fa fa-lock"></i>
+      </div>
+      <div class="forget-group help">
+        <input class="forget-cont" type="password" id="password2" placeholder="确认密码">
+        <i class="fa fa-lock"></i>
+      </div>
+      <!--下一步按钮-->
+      <div class="forget-btn">
+        <button type="submit" id="Next" class="logbtn">完成修改</button>
+      </div>
+    </div>
+  </form>
+</div>
+</body>
+<script src="../../js/jquery-3.4.1.min.js" type="text/javascript"></script>
+<script src="../../js/popup.js" type="text/javascript"></script>
+<script src="../../js/admin/AL-forgetpwd.js" type="text/javascript"></script>
+</html>

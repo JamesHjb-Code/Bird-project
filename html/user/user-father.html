@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>鸟类数据标注系统平台—用户</title>
+  <link rel="stylesheet" href="../../css/user/user-father.css">
+  <link rel="stylesheet" href="../../css/nav.css"><!--下拉菜单栏-->
+  <link rel="stylesheet" href="../../css/style.css"><!--轮播图控制框-->
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"><!--icon图标-->
+  <link rel="stylesheet" type="text/css" href="../../fonts/iconfont.css"><!--箭头icon-->
+  <link rel="stylesheet" type="text/css" href="../../css/tooltip.min.css"><!--工具提示框-->
+  <style type="text/css">
+    li:active, li:focus, .li-active {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <div class="head">
+    <!--顶部的LOGO-->
+    <div class="logo">
+      <img src="../../img/logo.png" height="60" width="240">
+    </div>
+    <!--顶部的搜索栏-->
+    <div class="search">
+      <div class="sear">
+        <form>
+          <input type="text" class="sousuo"placeholder="搜索从这里开始..." id="key">
+          <input type="button" class="ButtonSS" type="submit" value="搜索" onclick="tiaozhuan()" target="main_self_frame">
+        </form>
+      </div>
+    </div>
+    <!--顶部的右侧-->
+    <div class="right-head">
+      <!--首页的LOGO-->
+      <div class="right-index">
+        <div class="index-logo">
+          <a href="user-index.html" data-tooltip="首页"  target="main_self_frame"><i class="fa fa-home"></i></a>
+        </div>
+      </div>
+      <!--修改密码的LOGO-->
+      <div class="right-pwd">
+        <div class="pwd-logo">
+          <a href="user-forgetpwd.html" data-tooltip="修改密码"  target="main_self_frame"> <i class="fa fa-lock"></i></a>
+        </div>
+      </div>
+      <!--退出的LOGO-->
+      <div class="right-close">
+        <div class="close-logo">
+          <a href="user-login.html" data-tooltip="退出"><i class="fa fa-power-off"></i></a>
+        </div>
+      </div>
+      <!--头像的LOGO-->
+      <div onclick="myFunction()">
+        <div class="right-personal">
+          <div class="personal-logo">
+            <i class="fa fa-user" id="dropbtn"></i>
+          </div>
+          <!--下拉菜单-->
+          <div id="myDropdown" class="dropdown-content">
+            <a href="user-forgetpwd.html"  target="main_self_frame"><i class="fa fa-lock"></i>修改密码</a>
+            <hr style="height:4px;border:none;border-top:2px double #e4dedf;" />
+            <a href="user-login.html"><i class="fa fa-sign-out"></i>注销</a>
+          </div>
+          <div class="personal-font">
+            <span>用户</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--左侧菜单栏-->
+  <!--主页信息-->
+  <div class="contion">
+    <div class="left-cd">
+      <div class="nav">
+        <div class="nav-top">
+          <div class="nav-time">
+            <div id="time"></div>
+            <div id="date"></div>
+          </div>
+        </div>
+        <!--线条-->
+        <hr style="height:4px;border:none;border-top:2px double #e4dedf;" />
+        <!--天气信息-->
+        <div class="top-weather" id="weather1">
+          <div class="weather">
+            <iframe name="weather_inc" src="http://i.tianqi.com/index.php?c=code&id=138&site=17" width="207" height="85" frameborder="0" marginwidth="0" marginheight="0" scrolling="no">
+            </iframe>
+          </div>
+        </div>
+        <ul id="qwe">
+          <li class="nav-item">
+            <a href="javascript:;"><i class="fa fa-pie-chart"></i><span>鸟类分类</span><i class="my-icon nav-more"></i></a>
+            <ul id="test">
+              <li><a href="user-quexing.html"  target="main_self_frame"><span class="smalldao">雀形目</span></a></li>
+              <li><a href="user-yanxing.html"  target="main_self_frame"><span class="smalldao">雁形目</span></a></li>
+              <li><a href="user-yeying.html"  target="main_self_frame"><span class="smalldao">夜鹰目</span></a></li>
+              <li><a href="user-gexing.html"  target="main_self_frame"><span class="smalldao">鸽形目</span></a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="javascript:;"><i class="fa fa-file-image-o"></i><span class="kg">鸟类标注</span><i class="my-icon nav-more"></i></a>
+            <ul>
+              <li><a href="user-labels.html"  target="main_self_frame"><span class="smalldao">A类标注</span></a></li>
+              <li><a href="user-Mark.html"  target="main_self_frame"><span class="smalldao">B类标注</span></a></li>
+              <li><a href="user-Exportfile.html"  target="main_self_frame"><span class="smalldao">导出文件</span></a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="javascript:;"><i class="fa fa-twitter"></i><span class="kg">鸟类信息</span><i class="my-icon nav-more"></i></a>
+            <ul>
+              <li><a href="user-LoginAddBird.html"  target="main_self_frame"><span class="smalldao">添加鸟类</span></a></li>
+              <li><a href="user-LoginMusic.html"  target="main_self_frame"><span class="smalldao">鸟叫信息</span></a></li>
+              <li><a href="user-LoginQueryBird.html"  target="main_self_frame"><span class="smalldao">鸟类管理</span></a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="javascript:;"><i class="fa fa-user-circle"></i><span>个人用户</span><i class="my-icon nav-more"></i></a>
+            <ul>
+              <li><a href="user-forgetpwd.html"  target="main_self_frame"><span class="smalldao">修改密码</span></a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!--右侧信息-->
+    <div class="right-contion">
+      <!--下面的信息-->
+      <iframe src="user-index.html" name="main_self_frame" frameborder="0" class="layadmin-iframe"  width="100%" height="100%" scrolling="yes"></iframe>
+    </div>
+  </div>
+</div>
+<!--元素来作为tooltip的容器-->
+<div class="tooltip-container no-display"></div>
+</body>
+<script src="../../js/jquery-1.11.0.min.js" type="text/javascript"></script><!--js框架-->
+<script src="../../js/user/user-father.js" type="text/javascript"></script>
+<script src="../../js/user/slide.js" type="text/javascript"></script><!--轮播图框架-->
+<script type="text/javascript" src="../../js/nav.js"></script><!--下拉菜单栏框架-->
+<script type="text/javascript" src="../../js/tooltip.min.js"></script><!--工具提示框架-->
+</html>

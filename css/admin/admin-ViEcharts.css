@@ -1,0 +1,231 @@
+*{
+  margin: 0;
+  padding:0;
+  text-decoration: none;
+  box-sizing:border-box;
+  font-family: montserrat;
+}
+body{
+  background: #e9e9e9;
+  height:100%;
+  width: 100%;
+  overflow: auto;
+}
+
+/*主页信息*/
+.right-contion{
+  width:100%;
+  height:100%;
+}
+/*顶部导航*/
+.right-h1{
+  background: #ffffff;
+  width: 100%;
+  height:70px;
+  box-shadow:-5px 5px 5px #b4b3ab;
+}
+.box-h1{
+  width:550px;
+  height:50px;
+  float:left;
+  margin-left:20px;
+  margin-top:10px
+}
+.head-h1{
+  font-size:3rem;
+  line-height:50px;
+  font-weight:bold;
+  font-family: "Adobe Ming Std L";
+  float: left;
+}
+.head-xt{
+  width:24px;
+  height:40px;
+  margin-top:5px;
+  margin-left:15px;
+  border-left:2px solid #999999;
+  float:left;
+}
+.head-nav{
+  width: 60%;
+  height:50px;
+  float:left;
+}
+.head-nav i{
+  font-size:25px;
+}
+.head-nav1 i{
+  font-size:22px;
+}
+.head-icon{
+  font-size:2.2rem;
+  margin-top:3.5%;
+  float: left;
+}
+.head-font{
+  font-size:2.2rem;
+  float: left;
+  margin-left:5px;
+  line-height: 48px;
+}
+.head-font i{
+  font-size:2.2rem;
+}
+
+/*查看信息*/
+.right-table{
+  width:100%;
+  height:88%;
+}
+.right-box{
+  width:95%;
+  height:100%;
+  background: #ffffff;
+  margin: 15px auto;
+  border-radius: 30px;
+  box-shadow: 0 0 9px 3px #787878;
+}
+.right-inf{
+  width:100%;
+  height:91%;
+}
+.right-left{
+  width:50%;
+  height:100%;
+  float: left;
+}
+.right-right{
+  width:50%;
+  height:100%;
+  float: right;
+  padding-top:60px;
+  background: rgb(246, 246, 246);
+  border-radius: 30px;
+ box-shadow: 10px 10px 10px #cdcdcd;
+}
+.right-head1{
+  width:100%;
+  height:70px;
+  background: #289bff;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  text-align: center;
+}
+.right-head1 span{
+  color:#fff;
+  font-size:35px;
+  line-height:67px;
+}
+.add-button{
+  width:100%;
+  height:60px;
+  margin:0 auto;
+  margin-bottom: 20px;
+}
+.logbtn{
+  display: block;
+  width: 270px;
+  height: 45px;
+  border: none;
+  background: linear-gradient(120deg, #1edb00, #aaffa5, #1edb00);
+  background-size: 200%;
+  color: #fff;
+  outline: none;
+  cursor: pointer;
+  transition: .5s;
+  font-size: 22px;
+  font-weight: bold;
+  border-radius: 35px;
+  margin:0 auto;
+}
+.logbtn:hover{
+  background-position: right;
+}
+/*查看用户表格*/
+.msg{
+  width:620px;
+  margin:0 auto;
+}
+.ta{
+  width: 620px;
+  height:50px;
+  text-align:center;
+  margin:0 auto;
+  margin-top:10px;
+  font-weight: bold;
+  font-size:22px;
+}
+.ta tr td{
+  width:100px;
+  border-right:1px solid #ffffff;
+  background: #1f97ef;
+  color: #ffffff;
+}
+/*显示数据*/
+.msg table{
+  width:620px;
+  height:400px;
+  text-align:center;
+}
+.msg table tbody tr{
+  background: #3ce9ff;
+}
+.msg table tbody tr:nth-child(odd){
+  background: rgba(42, 248, 255, 0.35)
+}
+/*table tbody tr:nth-child(odd){*/
+/*background: rgb(255, 68, 183);*/
+/*}*/
+
+/*显示分页功能*/
+.text table{
+  width:620px;
+  height:50px;
+  text-align:center;
+}
+table tr td{
+  width:70px;
+  border-bottom:1px solid #ffffff;
+}
+.btn-fy ul{
+  width:330px;
+  height:30px;
+  margin-top:20px;
+  float: right;
+}
+.btn-fy .page{
+  padding-left: 160px;
+}
+.btn-fy ul li{
+  width:75px;
+  height:30px;
+  line-height:28px;
+  text-align:center;
+  float:left;
+  list-style:none;
+  font-size:20px;
+  margin-left:10px;
+  cursor:pointer;
+  border-radius: 20px;
+  background: #44a8ff;
+  color: #ffffff;
+  font-weight:400;
+}
+.btn-fy ul li:hover{
+  background: #4085da;
+}
+.btn-fy ul .jump{
+  width:50px;
+  height:20px;
+  border:0;
+}
+.text{
+  width:280px;
+  height:30px;
+  line-height:30px;
+  text-align:left;
+  font-size:21px;
+  float:left;
+  margin-top:20px;
+  font-weight: 700;
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <meta charset="UTF-8">
+  <title>鸟类数据标注系统平台—管理员</title>
+  <link rel="stylesheet" href="../../css/admin/admin-father.css">
+  <link rel="stylesheet" href="../../css/nav.css"><!--下拉菜单栏-->
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"><!--icon图标-->
+  <link rel="stylesheet" type="text/css" href="../../fonts/iconfont.css"><!--箭头icon-->
+  <link rel="stylesheet" type="text/css" href="../../css/tooltip.min.css"><!--工具提示框-->
+</head>
+<body>
+<div class="wrap">
+  <div class="head">
+    <!--顶部的LOGO-->
+    <div class="logo">
+      <img src="../../img/logo.png" height="60" width="240">
+    </div>
+    <!--顶部的右侧-->
+    <div class="right-head">
+      <!--首页的LOGO-->
+      <div class="right-index">
+        <div class="index-logo">
+          <a href="admin-index.html" data-tooltip="首页" target="main_self_frame"><i class="fa fa-home"></i></a>
+        </div>
+      </div>
+      <!--修改密码的LOGO-->
+      <div class="right-pwd">
+        <div class="pwd-logo">
+          <a href="admin-forgetpwd.html" data-tooltip="修改密码" target="main_self_frame"> <i class="fa fa-lock"></i></a>
+        </div>
+      </div>
+      <!--退出的LOGO-->
+      <div class="right-close">
+        <div class="close-logo">
+          <a href="admin-login.html" data-tooltip="退出"><i class="fa fa-power-off"></i></a>
+        </div>
+      </div>
+      <!--头像的LOGO-->
+      <div onclick="myFunction()">
+        <div class="right-personal">
+          <div class="personal-logo">
+            <i class="fa fa-user" id="dropbtn"></i>
+          </div>
+          <!--下拉菜单-->
+          <div id="myDropdown" class="dropdown-content">
+            <a href="admin-forgetpwd.html" target="main_self_frame"><i class="fa fa-lock"></i>修改密码</a>
+            <hr style="height:4px;border:none;border-top:2px double #e4dedf;" />
+            <a href="admin-login.html"><i class="fa fa-sign-out"></i>注销</a>
+          </div>
+          <div class="personal-font">
+            <span>管理员</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--左侧菜单栏-->
+  <!--主页信息-->
+  <div class="contion">
+    <div class="left-cd">
+      <div class="nav">
+        <div class="nav-top">
+          <div class="nav-time">
+            <div id="time"></div>
+            <div id="date"></div>
+          </div>
+        </div>
+        <!--线条-->
+        <hr style="height:4px;border:none;border-top:2px double #e4dedf;" />
+        <!--天气信息-->
+        <div class="top-weather" id="weather1">
+          <div class="weather">
+            <iframe name="weather_inc" src="http://i.tianqi.com/index.php?c=code&id=138&site=17" width="207" height="85" frameborder="0" marginwidth="0" marginheight="0" scrolling="no">
+            </iframe>
+          </div>
+        </div>
+        <ul id="qwe">
+          <li class="nav-item">
+            <a href="javascript:;"><i class="fa fa-pie-chart"></i><span>鸟类分类</span><i class="my-icon nav-more"></i></a>
+            <ul>
+              <li><a href="../user/user-quexing.html" target="main_self_frame"><span class="smalldao">雀形目</span></a></li>
+              <li><a href="../user/user-yanxing.html" target="main_self_frame"><span class="smalldao">雁形目</span></a></li>
+              <li><a href="../user/user-yeying.html" target="main_self_frame"><span class="smalldao">夜鹰目</span></a></li>
+              <li><a href="../user/user-gexing.html" target="main_self_frame"><span class="smalldao">鸽形目</span></a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="javascript:;"><i class="fa fa-twitter"></i><span>鸟类管理</span><i class="my-icon nav-more"></i></a>
+            <ul>
+              <li><a href="../admin/admin-addbird.html" target="main_self_frame"><span class="smalldao">添加鸟类</span></a></li>
+              <li><a href="../AU-Vibird.html" target="main_self_frame"><span class="smalldao">鸟类信息</span></a></li>
+              <li><a href="../admin/admin-ViEcharts.html" target="main_self_frame"><span class="smalldao">饼图信息</span></a></li>
+              <li><a href="../admin/admin-Anninfmang.html" target="main_self_frame"><span class="smalldao">标注信息管理</span></a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="javascript:;"><i class="fa fa-users"></i><span>用户管理</span><i class="my-icon nav-more"></i></a>
+            <ul>
+              <li><a href="../admin/admin-Viuser.html" target="main_self_frame"><span class="smalldao">查看用户</span></a></li>
+              <li><a href="../admin/admin-rights.html" target="main_self_frame"><span class="smalldao">用户权限</span></a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="javascript:;"><i class="fa fa-user-circle-o"></i><span>管理员管理</span><i class="my-icon nav-more"></i></a>
+            <ul>
+              <li><a href="../admin/admin-forgetpwd.html" target="main_self_frame"><span class="smalldao">修改密码</span></a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!--右侧信息-->
+    <div class="right-contion">
+      <!--下面的信息-->
+        <iframe src="admin-index.html" name="main_self_frame" frameborder="0" class="layadmin-iframe"  width="100%" height="100%" scrolling="yes"></iframe>
+    </div>
+  </div>
+</div>
+<!--元素来作为tooltip的容器-->
+<div class="tooltip-container no-display"></div>
+<!--清除浮动-->
+<!--  <div style ="clear:both"></div>-->
+</body>
+<script src="../../js/jquery-1.11.0.min.js" type="text/javascript"></script><!--js框架-->
+<script src="../../js/admin/admin-father.js" type="text/javascript"></script>
+<script type="text/javascript" src="../../js/nav.js"></script><!--下拉菜单栏框架-->
+<script type="text/javascript" src="../../js/tooltip.min.js"></script><!--工具提示框架-->
+</html>

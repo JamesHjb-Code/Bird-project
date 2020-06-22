@@ -1,0 +1,125 @@
+*{
+  margin: 0;
+  padding:0;
+  text-decoration: none;
+  box-sizing:border-box;
+  font-family: montserrat;
+}
+body{
+  min-height: 100vh;
+  background-image: url("../../img/login.jpg");
+  background-size:100% 100%;
+}
+.reg-ground{
+  width: 700px;
+  background: #ffffff;
+  height: 670px;
+  border-radius: 15px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  box-shadow: 0px 0px 10px 5px #ffffff;
+}
+.head-zt{
+  margin-top:30px;
+  width:400px;
+  height:50px;
+  margin-left:50px;
+  background: #2516cc;
+}
+.heading{
+  display: block;
+  font-size: 35px;
+  font-weight: 700;
+  padding: 35px 0;
+  border-bottom: 1px solid #cbcbcb;
+  margin-bottom: 60px;
+  text-align: center;
+}
+.re-input {
+  width: 500px;
+  height: 500px;
+  margin:0 auto;
+  margin-top:110px;
+}
+.form-group{
+  padding: 0 10px;
+  margin: 0 0 25px 0;
+  position: relative;
+}
+
+.form-cont{
+  background: #f0f0f0;
+  border: none;
+  width:400px;
+  margin-left:10px;
+  border-radius: 30px;
+  box-shadow: none;
+  padding: 0 20px 0 45px;
+  height: 40px;
+  transition: all 0.3s ease 0s;
+}
+.form-cont:focus{
+  background: #e0e0e0;
+  box-shadow: none;
+  outline: 0 none;
+}
+.form-group i{
+  position: absolute;
+  top: 8px;
+  left: 39px;
+  font-size: 23px;
+  color: #c8c8c8;
+  transition : all 0.5s ease 0s;
+}
+i .fa-envelope{
+  font-size: 12px;
+}
+.form-cont:focus + i{
+  color: #00b4ef;
+}
+/*注册按钮*/
+.reg-btn{
+  height: 50px;
+  margin-left:110px;
+  margin-top:50px;
+}
+.logbtn{
+  display: block;
+  width: 270px;
+  height: 45px;
+  border: none;
+  background: linear-gradient(120deg,#3498db, #30e6ff,#3498db);
+  background-size: 200%;
+  color: #fff;
+  outline: none;
+  cursor: pointer;
+  transition: .5s;
+  font-size: 22px;
+  font-weight: bold;
+  border-radius: 35px;
+}
+.logbtn1{
+  display: block;
+  width: 50px;
+  height: 35px;
+  border: none;
+  background: linear-gradient(120deg,#3498db, #30e6ff,#3498db);
+  background-size: 200%;
+  color: #fff;
+  outline: none;
+  cursor: pointer;
+  transition: .5s;
+  margin-top:3px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 35px;
+  float: right;
+}
+.logbtn:hover{
+  background-position: right;
+}
+.logbtn1:hover{
+  background-position: right;
+}

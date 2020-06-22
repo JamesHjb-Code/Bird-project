@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>饼图信息</title>
+  <link href="../../css/bootstrap.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/admin/admin-ViEcharts.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"><!--icon-->
+  <link rel="stylesheet" type="text/css" href="../../css/tooltip.min.css">
+</head>
+<body>
+<!--右侧信息-->
+<div class="right-contion">
+  <!--名字标题-->
+  <div class="right-h1">
+    <div class="box-h1">
+      <div class="head-h1">
+        <span>饼图信息</span>
+      </div>
+      <div class="head-xt">
+      </div>
+      <div class="head-nav">
+        <div class="head-icon">
+          <i class="fa fa-home"></i>
+          <i class="fa fa-angle-right"></i>
+          <span class="head-nav1">
+              <i class="fa fa-twitter"></i>
+              </span>
+        </div>
+        <div class="head-font">
+          <span>鸟类管理</span>
+          <i class="fa fa-angle-right"></i>
+          <span>饼图信息</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--查看用户-表格-->
+  <div class="right-table">
+    <div class="right-box">
+      <div class="right-head1">
+        <span>饼图信息</span>
+      </div>
+      <!--所有信息-->
+      <div class="right-inf">
+        <!--饼图信息-->
+        <div class="right-left">
+          <iframe src="../Echarts/simple.html" width="100%" height="100%" frameborder="no" scrolling="0"></iframe>
+        </div>
+      <div class="right-right">
+        <div class="add-button">
+          <button class="logbtn" data-toggle="modal" data-target="#myModal1">添加</button>
+        </div>
+        <table class="ta">
+          <tr>
+            <td style="width: 40px;">编号</td>
+            <td style="width: 70px;">鸟目</td>
+            <td style="width: 70px;">数量</td>
+            <td style="width: 70px;">操作</td>
+          </tr>
+        </table>
+        <div class="msg">
+          <!--显示数据-->
+          <table></table>
+          <!--数据记录-->
+          <div class="btn-fy">
+            <div class="text">
+              <table></table>
+            </div>
+            <ul class="page">
+              <li class="prePage">上一页</li>
+              <li class="nextPage">下一页</li>
+            </ul>
+          </div>
+          </msg>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+<!-- id='change' data-toggle='modal' data-target='myModal'-->
+<!--模态框-修改-->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+        <span>编号:</span>
+        <h4 class="modal-title ss" id="myModalLabel" style="display: inline-block" data-index="0">Modal title</h4>
+        <span class="updata-head">修改编辑</span>
+      </div>
+      <div class="modal-body">
+        <form class="form-horizontal" id="form">
+          <div class="form-group">
+            <label class="col-sm-2 control-label"></label>
+            <div class="col-sm-10">
+              <span class="font-s">鸟目：</span><input type="text" class="form-control ss"  name="mu" placeholder="鸟目" data-index="1">
+            </div>
+          </div>
+          <div class="form-group">
+            <label  class="col-sm-2 control-label"></label>
+            <div class="col-sm-10">
+              <span class="font-s">数量：</span><input type="text" class="form-control ss"  name="num" placeholder="数量" data-index="2">
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" id="sign">保存</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--模态框-添加-->
+<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+        <span class="updata-head1">添加鸟目信息</span>
+      </div>
+      <div class="modal-body">
+        <form class="form-horizontal" id="form1">
+          <div class="form-group">
+            <label class="col-sm-2 control-label"></label>
+            <div class="col-sm-10">
+              <span class="font-s">鸟目：</span><input type="text" class="form-control ss"  name="mu" id="mu" placeholder="鸟目">
+            </div>
+          </div>
+          <div class="form-group">
+            <label  class="col-sm-2 control-label"></label>
+            <div class="col-sm-10">
+              <span class="font-s">数量：</span><input type="text" class="form-control ss"  name="num" id="num" placeholder="数量">
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" id="tianjia">提交</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--清除浮动-->
+<!--  <div style ="clear:both"></div>-->
+</body>
+
+<script src="../../js/jquery-1.11.0.min.js" type="text/javascript"></script>
+<script src="../../js/admin/admin-ViEcharts.js" type="text/javascript"></script>
+
+<script src="../../js/bootstrap.min.js"></script>
+</html>

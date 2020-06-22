@@ -1,0 +1,188 @@
+*{
+  margin: 0;
+  padding:0;
+  text-decoration: none;
+  box-sizing:border-box;
+  font-family: montserrat;
+}
+body{
+  background: #e9e9e9;
+  height:100%;
+  width: 100%;
+  overflow: auto;
+}
+/*主页信息*/
+.right-contion{
+  width:100%;
+  height:100%;
+}
+/*顶部导航*/
+.right-h1{
+  background: #ffffff;
+  width: 100%;
+  height:70px;
+  box-shadow:-5px 5px 5px #b4b3ab;
+}
+.box-h1{
+  width:550px;
+  height:50px;
+  float:left;
+  margin-left:20px;
+  margin-top:10px
+}
+.head-h1{
+  font-size:3rem;
+  line-height:50px;
+  font-weight:bold;
+  font-family: "Adobe Ming Std L";
+  float: left;
+}
+.head-xt{
+  width:24px;
+  height:40px;
+  margin-top:5px;
+  margin-left:15px;
+  border-left:2px solid #999999;
+  float:left;
+}
+.head-nav{
+  width: 60%;
+  height:50px;
+  float:left;
+}
+.head-icon{
+  font-size:2.2rem;
+  margin-top:3.5%;
+  float: left;
+}
+.head-nav i{
+  font-size:25px;
+}
+.head-font{
+  font-size:2.2rem;
+  float: left;
+  margin-left:5px;
+  line-height: 48px;
+}
+.head-font i{
+  font-size:2.2rem;
+}
+/*主页信息*/
+.right-information{
+  height:86%;
+}
+.Cen-information{
+  margin:0 auto;
+  width:900px;
+  height:92%;
+  margin-top:3%;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 10px 10px 15px #b3b3b3;
+}
+.Cen-small{
+  width:700px;
+  height:700px;
+  margin:0 auto;
+}
+.small-head{
+  width: 700px;
+  height:200px;
+}
+.inf-icon{
+  width:200px;
+  height:200px;
+
+  float: left;
+}
+.inf-font{
+  margin-top:25px;
+  width:500px;
+  height:150px;
+  float: left;
+}
+.font-head{
+  text-align: center;
+  font-size: 40px;
+  margin-top:20px;
+  font-weight: bold;
+}
+.hr1{ height:1px;
+  border:none;
+  border-top:2px solid #9b9b9b;
+  margin-top:10px;
+}
+.font-head1{
+  text-align: center;
+  font-size: 25px;
+  margin-top:20px;
+  font-weight: bold;
+}
+.small-bottom{
+  width:700px;
+  height:400px;
+}
+/*输入框*/
+.forget-input{
+  margin-top:100px;
+  margin-left:120px;
+}
+.forget-group{
+  padding: 0 40px;
+  margin: 0 0 25px 0;
+  position: relative;
+}
+.forget-cont{
+  background: #f0f0f0;
+  border: none;
+  width:400px;
+  margin-left:10px;
+  border-radius: 30px;
+  box-shadow: none;
+  padding: 0 20px 0 45px;
+  height: 40px;
+  transition: all 0.3s ease 0s;
+}
+.forget-cont:focus{
+  background: #e0e0e0;
+  box-shadow: none;
+  outline: 0 none;
+}
+.forget-group i{
+  position: absolute;
+  top: 8px;
+  left: 69px;
+  font-size: 23px;
+  color: #c8c8c8;
+  transition : all 0.5s ease 0s;
+}
+i .fa-envelope{
+  font-size: 12px;
+}
+.forget-cont:focus + i{
+  color: #00b4ef;
+}
+/*按钮*/
+.forget-btn{
+  height: 50px;
+  margin-left:110px;
+  margin-top:50px;
+}
+.logbtn{
+  display: block;
+  width: 270px;
+  height: 45px;
+  border: none;
+  background: linear-gradient(120deg,#3498db, #30e6ff,#3498db);
+  background-size: 200%;
+  color: #fff;
+  outline: none;
+  cursor: pointer;
+  transition: .5s;
+  font-size: 22px;
+  font-weight: bold;
+  border-radius: 35px;
+}
+.logbtn:hover{
+  background-position: right;
+}
